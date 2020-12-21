@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVVMWPF", "MVVMWPF\MVVMWPF.csproj", "{97D47557-83C2-4301-BF6F-3C808D1F3F6C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{90CA42B8-BAF7-42D7-BEFD-F8B6D544A409}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVVMConsole", "Test\MVVMConsole\MVVMConsole.csproj", "{A3AD2D1B-C1C0-4E11-8D5D-1633AADBAD48}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +19,16 @@ Global
 		{97D47557-83C2-4301-BF6F-3C808D1F3F6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97D47557-83C2-4301-BF6F-3C808D1F3F6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97D47557-83C2-4301-BF6F-3C808D1F3F6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3AD2D1B-C1C0-4E11-8D5D-1633AADBAD48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3AD2D1B-C1C0-4E11-8D5D-1633AADBAD48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3AD2D1B-C1C0-4E11-8D5D-1633AADBAD48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3AD2D1B-C1C0-4E11-8D5D-1633AADBAD48}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A3AD2D1B-C1C0-4E11-8D5D-1633AADBAD48} = {90CA42B8-BAF7-42D7-BEFD-F8B6D544A409}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7856EB86-B39C-4FD2-84A4-6945264DBB82}
