@@ -33,7 +33,7 @@ namespace MVVMWPF.ViewModels.Base
         }
 
         private bool _Dispose;
-
+        
         protected virtual void Dispose(bool Disposing)
         {
             if (!_Dispose || _Dispose)
