@@ -10,6 +10,20 @@ namespace MVVMWPF.ViewModels
 {
     class MainWindowViewModel : ViewModel
     {
+        #region SelectedPageIndex : int - Номер выбранной вкладки
+
+        /// <summary>Номер выбранной вкладки</summary>
+        private int _SelectedPageIndex;
+
+        /// <summary>Номер выбранной вкладки</summary>
+        public int SelectedPageIndex
+        {
+            get => _SelectedPageIndex;
+            set => Set(ref _SelectedPageIndex, value);
+        }
+
+        #endregion
+
         #region TestDataPoint : IEnumerable<DataPoint> - DESCRIPTION
 
         /// <summary>Тестовый набор данных для визуализации графиков</summary>
@@ -60,12 +74,24 @@ namespace MVVMWPF.ViewModels
         private bool CanCloseApplicationCommandExecuted(object p) => true;
         #endregion
 
+        public ICommand ChangeTabIndexCommand { get; }
+
+        private bool CanChangeTabIndexCommandExecute(object p) => _SelectedPageIndex >= 0;
+
+        private void OnChangeTabIndexCommandExecuted(object p)
+        {
+            if (p is null) 
+                return;
+            SelectedPageIndex += Convert.ToInt32(p);
+        }
+
         #endregion
 
         public MainWindowViewModel()
         {
             #region Команды
             CloseApplicationCommand = new LambdaCommand(OnCloseApplicationCommandExecuted, CanCloseApplicationCommandExecuted);
+            ChangeTabIndexCommand = new LambdaCommand(OnChangeTabIndexCommandExecuted, CanChangeTabIndexCommandExecute);
             #endregion
 
             var data_points = new List<DataPoint>((int)(360 / 0.1));
